@@ -5,6 +5,11 @@ export const Title = styled.h1`
   color: ${(props) => props.theme.accentColor};
 `;
 
+export const Loader = styled.span`
+  text-align: center;
+  display: block;
+`;
+
 export const Container = styled.div`
   max-width: 480px;
   margin: 0 auto;
