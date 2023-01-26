@@ -1,4 +1,6 @@
+import { Title } from "../styles/CoinsStyle";
+
 function Coins() {
-  return <h1>Coins</h1>;
+  return <Title>Coins</Title>;
 }
 export default Coins;
