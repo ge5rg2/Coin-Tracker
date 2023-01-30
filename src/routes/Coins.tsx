@@ -5,6 +5,7 @@ import {
   CoinsList,
   Coin,
   Loader,
+  Img,
 } from "../styles/CoinsStyle";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -33,7 +34,12 @@ function Coins() {
         <CoinsList>
           {coins.map((coin) => (
             <Coin key={coin.id}>
-              <Link to={`/${coin.id}`}>{coin.name} &rarr;</Link>
+              <Link to={`/${coin.id}`} state={`name: ${coin.name}`}>
+                <Img
+                  src={`https://coinicons-api.vercel.app/api/icon/${coin.symbol.toLowerCase()}`}
+                />
+                {coin.name} &rarr;
+              </Link>
             </Coin>
           ))}
         </CoinsList>

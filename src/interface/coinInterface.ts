@@ -7,3 +7,13 @@ export interface CoinInterface {
   is_active: boolean;
   type: string;
 }
+
+export interface RouteParms {
+  coinId: string;
+}
+
+export interface RouteState {
+  state: {
+    name: string;
+  };
+}
